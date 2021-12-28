@@ -1,0 +1,29 @@
+.powerStatsWrapper {
+  margin: 2rem 1rem 0 1rem;
+}
+
+.powerStatsName {
+  margin-bottom: 0.5rem;
+  padding: 5px;
+  border: 1px white solid;
+  border-radius: 10px;
+  background-color: #328f40;
+}
+
+.powerStatsValue {
+  text-align: center;
+}
+
+.team-major-stat {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  padding: 5px;
+  border: 1px white solid;
+  border-radius: 10px;
+  background-color: #b32428;
+}
+
+.team-title {
+  font-size: 2rem;
+}

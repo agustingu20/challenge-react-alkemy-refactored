@@ -1,24 +1,90 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Login from './components/Login';
+import NavBar from './components/NavBar';
+import "./services/home.css"
+
+const localToken = JSON.parse(localStorage.getItem("token"))?.token || "";
 
 function App() {
+  const [token, setToken] = useState(localToken)
+  const [team, setTeam] = useState([])
+  console.log("App ~ team", team)
+
+  const [teamPowerstats, setTeamPowerstats] = useState([])
+
+  const [majorPowerStatName, setMajorPowerStatName] = useState([]);
+  const [majorPowerStatValue, setMajorPowerStatValue] = useState([]);
+
+  const heroTeam = useSelector((store) => store.teamHero)
+  const heroPowerstats = useSelector((store) => store.teamPowerStats)
+
+  const [heroesQuota, setHeroesQuota] = useState({
+    goodHeroes: 0,
+    badHeroes: 0
+  })
+  console.log("App ~ heroesQuota", heroesQuota)
+
+  useEffect(
+    () => {
+      const addTeam = () => {
+        const teamFilter = team.filter(team => team !== null)
+        const teamFilterPowerstats = teamPowerstats.filter(team => team !== null)
+        setTeam([...teamFilter, heroTeam])
+        setTeamPowerstats([...teamFilterPowerstats, heroPowerstats])
+      }
+      addTeam()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [heroTeam]
+  )
+
+  const deleteHero = (event) => {
+    event.preventDefault();
+    const teamFiltered = team.filter(
+      (teammate) => teammate.id !== event.target.value
+    );
+    const teamPowerStatsFiltered = teamPowerstats.pop();
+    console.log("teamPowerStatsFiltered", teamPowerStatsFiltered)
+    setTeam(teamFiltered);
+  };
+
+  const logOut = () => {
+    localStorage.removeItem("token")
+    setToken("")
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="index-component text-home">
+      <Router>
+        <NavBar logOut={logOut} token={token} />
+        <Switch>
+          <Route path="/login" exact >
+            <Login setToken={setToken} />
+          </Route>
+          <Route path="/" exact >
+            <Home
+              token={token}
+              setTeam={setTeam}
+              team={team}
+              deleteHero={deleteHero}
+              setTeamPowerstats={setTeamPowerstats}
+              teamPowerstats={teamPowerstats}
+              setMajorPowerStatName={setMajorPowerStatName}
+              setMajorPowerStatValue={setMajorPowerStatValue}
+              majorPowerStatName={majorPowerStatName}
+              majorPowerStatValue={majorPowerStatValue}
+              setHeroesQuota={setHeroesQuota}
+              heroesQuota={heroesQuota}
+            />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </div >
   );
 }
 
