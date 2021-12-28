@@ -13,7 +13,6 @@ const localToken = JSON.parse(localStorage.getItem("token"))?.token || "";
 function App() {
   const [token, setToken] = useState(localToken)
   const [team, setTeam] = useState([])
-  console.log("App ~ team", team)
 
   const [teamPowerstats, setTeamPowerstats] = useState([])
 
@@ -27,7 +26,6 @@ function App() {
     goodHeroes: 0,
     badHeroes: 0
   })
-  console.log("App ~ heroesQuota", heroesQuota)
 
   useEffect(
     () => {
@@ -47,8 +45,8 @@ function App() {
     const teamFiltered = team.filter(
       (teammate) => teammate.id !== event.target.value
     );
+    // eslint-disable-next-line no-unused-vars
     const teamPowerStatsFiltered = teamPowerstats.pop();
-    console.log("teamPowerStatsFiltered", teamPowerStatsFiltered)
     setTeam(teamFiltered);
   };
 
