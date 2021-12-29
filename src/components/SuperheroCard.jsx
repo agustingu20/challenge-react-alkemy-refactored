@@ -19,6 +19,13 @@ export default function SuperheroCard({
 }) {
   const dispatch = useDispatch();
 
+  const {
+    biography: { alignment },
+    id,
+    image: { url },
+    name,
+  } = hero;
+
   const defineHeroesQuota = (team) => {
     let goodTeammates = 0;
     let badTeammates = 0;
@@ -53,7 +60,7 @@ export default function SuperheroCard({
   };
 
   const cambiarClase = () => {
-    const div = document.querySelector(`#hero-${hero.id}`);
+    const div = document.querySelector(`#hero-${id}`);
     div.classList.toggle("d-none");
   };
 
@@ -70,32 +77,32 @@ export default function SuperheroCard({
         aria-controls="example-collapse-text"
         aria-expanded={open}
         className="card-style"
-        key={`hero-${hero.id}`}
+        key={`hero-${id}`}
       >
         <Collapse in={open}>
           <div id="example-collapse-text">
-            <Card.Img variant="top" src={hero.image.url} />
+            <Card.Img variant="top" src={url} />
             <HeroPowerstats hero={hero} />
           </div>
         </Collapse>
         <Card.Body className="p-1">
           <div>
-            <Card.Title className="card-title">{hero.name}</Card.Title>
+            <Card.Title className="card-title">{name}</Card.Title>
             <div className="d-flex justify-content-start mb-1">
-              {hero.biography.alignment === "bad" ? (
+              {alignment === "bad" ? (
                 <Card.Title className="card-title-btn-bad">
-                  {hero.biography.alignment}
+                  {alignment}
                 </Card.Title>
               ) : (
-                hero.biography.alignment === "good" && (
+                alignment === "good" && (
                   <Card.Title className="card-title-btn-good">
-                    {hero.biography.alignment}
+                    {alignment}
                   </Card.Title>
                 )
               )}
-              {hero.biography.alignment === "neutral" && (
+              {alignment === "neutral" && (
                 <Card.Title className="card-title-btn-neutral">
-                  {hero.biography.alignment}
+                  {alignment}
                 </Card.Title>
               )}
               {open && (
@@ -113,7 +120,7 @@ export default function SuperheroCard({
             <Button
               variant="primary"
               className="btn btn-sm m-1"
-              value={hero.id}
+              value={id}
               onClick={handleClick}
             >
               Añadir al equipo
