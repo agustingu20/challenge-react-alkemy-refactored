@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useHistory } from "react-router";
 import axios from "axios";
+import swal from "sweetalert";
 
 const Login = ({ setToken }) => {
   const history = useHistory();
@@ -28,15 +29,22 @@ const Login = ({ setToken }) => {
             return errors;
           }}
           onSubmit={async (values, { setSubmitting, resetForm }) => {
-            const datos = values;
-            const response = await axios.post(
-              "http://challenge-react.alkemy.org/",
-              datos
-            );
-            localStorage.setItem("token", JSON.stringify(response.data));
-            setToken(response.data);
-            history.push("/");
-            resetForm();
+            try {
+              const datos = values;
+              const response = await axios.post(
+                "http://challenge-react.alkemy.org/",
+                datos
+              );
+              localStorage.setItem("token", JSON.stringify(response.data));
+              setToken(response.data);
+              history.push("/");
+              resetForm();
+            } catch (error) {
+              swal({
+                icon: "error",
+                title: "Ingrese un usuario y contraseña válidos",
+              });
+            }
           }}
         >
           {({ isSubmitting }) => (
