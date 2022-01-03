@@ -13,7 +13,7 @@ Develop an app to create a superhero team that consume an external API and will 
 ✔️ El manejo de HTTP deberá realizarse mediante Axios.
 <br />
 ✔️ El sitio deberá ser responsivo.
-* * *
+**
 ✔️ Consume the API endpoints to do the differents operations.
 <br />
 ✔️ The sections must be protected verifying that the register user have a token that will be store in the LocalStorage. If the user isn't autenticated, it will be send to the login page.
