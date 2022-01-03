@@ -7,6 +7,7 @@ Develop an app to create a superhero team that consume an external API and will 
 ## Requerimientos del challenge
 
 ✔️ Consumir los endpoints de la API para realizar las diferentes operaciones.
+<br />
 ✔️ Las secciones deberán protegerse verificando que el usuario registrado disponga de un token que se almacenará en el LocalStorage. Si el usuario no está autenticado deberá ser enviado al login.
 ✔️ El manejo de HTTP deberá realizarse mediante Axios.
 ✔️ El sitio deberá ser responsivo.
