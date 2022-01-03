@@ -1,10 +1,10 @@
 # Challenge Frontend React para el acelerado en Alkemy :rocket:
-## Objetivo del challenge
+## Objetivo del challenge // Challenge objective
 Desarrollar una aplicación para crear un equipo de superhéroes que consumirá una API externa y mostrará diferentes atributos a nivel individual de cada miembro y del equipo consolidado.
 
 Develop an app to create a superhero team that consume an external API and will shows different attributes on individual level of each member and from the consolid team.
 
-## Requerimientos del challenge
+## Requerimientos del challenge // Challenge requirements
 
 ✔️ Consumir los endpoints de la API para realizar las diferentes operaciones.
 <br />
@@ -14,7 +14,7 @@ Develop an app to create a superhero team that consume an external API and will 
 <br />
 ✔️ El sitio deberá ser responsivo.
 <br />
-<br />
+---
 ✔️ Consume the API endpoints to do the differents operations.
 <br />
 ✔️ The sections must be protected verifying that the register user have a token that will be store in the LocalStorage. If the user isn't autenticated, it will be send to the login page.
