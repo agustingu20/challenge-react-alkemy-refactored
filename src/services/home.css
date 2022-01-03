@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-.footer {
-  background-color: black;
-  position: absolute;
-  top: 100;
-  width: 100%;
-  padding-top: 2rem;
-}
-
 .index-component {
   background-image: url("./1.jpg");
   background-position: center;
@@ -32,4 +24,56 @@
   margin-right: auto;
   padding: 0.5rem;
   width: 400px;
+}
+
+a:hover {
+  color: rgb(0, 140, 255) !important;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Footer */
+
+.footer {
+  background-color: black;
+  position: absolute;
+  top: 100;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.creator-wrapper {
+  margin-left: 2rem;
+}
+
+.alkemy-wrapper {
+  margin: auto 2rem 1rem auto;
+}
+
+.alkemy-logo {
+  width: 150px;
+}
+
+@media only screen and (max-width: 425px) {
+  .alkemy-wrapper {
+    margin: auto;
+  }
+  .creator-wrapper {
+    margin: auto;
+  }
+  ul {
+    padding-left: 1rem !important;
+  }
 }
