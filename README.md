@@ -33,6 +33,7 @@ Develop an app to create a superhero team that consume an external API and will 
 
 # Instalación
 Tener instalado el paquete [npm](https://www.npmjs.com/)
+<br />
 Instalar complemento Moesif Origins & CORS Changer en Chrome en caso de tener problema de CORS por la API.
 
 ### Clonar el repositorio
@@ -47,6 +48,7 @@ $ npm start
 
 # Installation
 Use the package manager [npm](https://www.npmjs.com/)
+<br />
 Install Moesif Origins & CORS Changer complement on Chrome in case of having CORS problems.
 
 ### Clone the repository
