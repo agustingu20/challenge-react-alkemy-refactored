@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Challenge Frontend React para el acelerado en Alkemy :rocket:
+## Objetivo del challenge
+Desarrollar una aplicación para crear un equipo de superhéroes que consumirá una API externa y mostrará diferentes atributos a nivel individual de cada miembro y del equipo consolidado.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Develop an app to create a superhero team that consume an external API and will shows different attributes on individual level of each member and from the consolid team.
 
-## Available Scripts
+## Requerimientos del challenge
 
-In the project directory, you can run:
+✔️ Consumir los endpoints de la API para realizar las diferentes operaciones.
+✔️ Las secciones deberán protegerse verificando que el usuario registrado disponga de un token que se almacenará en el LocalStorage. Si el usuario no está autenticado deberá ser enviado al login.
+✔️ El manejo de HTTP deberá realizarse mediante Axios.
+✔️ El sitio deberá ser responsivo.
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+✔️ Consume the API endpoints to do the differents operations.
+✔️ The sections must be protected verifying that the register user have a token that will be store in the LocalStorage. If the user isn't autenticated, it will be send to the login page.
+✔️ The HTTP petitions must be done through Axios.
+✔️ The site must be be responsive.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usuario registrado para obtener TOKEN y API
+### Dirección de la API: https://superheroapi.com/
+### EL usuario necesario para obtener el TOKEN es: email: challenge@alkemy.org - password: react
 
-### `yarn test`
+### API web site: https://superheroapi.com/
+### User and password to get the TOKEN: email: challenge@alkemy.org - password: react
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Instalación
+Tener instalado el paquete [npm](https://www.npmjs.com/)
 
-### `yarn build`
+### Clonar el repositorio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+$ git clone https://github.com/karo18delgado/Proyecto-Final-RollingCode.git
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Instalation
+Use the package manager [npm](https://www.npmjs.com/)
 
-### `yarn eject`
+### Clone the repository
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+$ git clone https://github.com/karo18delgado/Proyecto-Final-RollingCode.git
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Autor ✒️
+**Agustín Gómez Urrutia** - [agustingu20](https://github.com/agustingu20)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Librerías 📚
+- Axios
+- Bootstrap
+- Formik
+- React-bootstrap
+- React-router-dom
+- Redux and Redux-thunk
+- SweetAlert
+- Yup
