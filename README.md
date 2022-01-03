@@ -14,7 +14,7 @@ Develop an app to create a superhero team that consume an external API and will 
 <br />
 ✔️ El sitio deberá ser responsivo.
 <br />
-<hr>
+* * *
 <br />
 ✔️ Consume the API endpoints to do the differents operations.
 <br />
