@@ -25,16 +25,15 @@ Develop an app to create a superhero team that consume an external API and will 
 
 ## Usuario registrado para obtener TOKEN y API
 - **Dirección de la API: https://superheroapi.com/**
-<br />
 - **EL usuario necesario para obtener el TOKEN es: email: challenge@alkemy.org - password: react**
 
 ## Register user to obtain TOKEN and API web site:
 - **API web site: https://superheroapi.com/**
-<br />
 - **User and password to get the TOKEN: email: challenge@alkemy.org - password: react**
 
 # Instalación
 Tener instalado el paquete [npm](https://www.npmjs.com/)
+Instalar complemento Moesif Origins & CORS Changer en Chrome en caso de tener problema de CORS por la API.
 
 ### Clonar el repositorio
 
@@ -48,6 +47,7 @@ $ npm start
 
 # Installation
 Use the package manager [npm](https://www.npmjs.com/)
+Install Moesif Origins & CORS Changer complement on Chrome in case of having CORS problems.
 
 ### Clone the repository
 
