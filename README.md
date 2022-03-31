@@ -39,7 +39,7 @@ Instalar complemento Moesif Origins & CORS Changer en Chrome en caso de tener pr
 ### Clonar el repositorio
 
 ```bash
-$ git clone https://github.com/karo18delgado/Proyecto-Final-RollingCode.git
+$ git clone https://github.com/agustingu20/challenge-react-alkemy-refactored.git
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
@@ -54,7 +54,7 @@ Install Moesif Origins & CORS Changer complement on Chrome in case of having COR
 ### Clone the repository
 
 ```bash
-$ git clone https://github.com/karo18delgado/Proyecto-Final-RollingCode.git
+$ git clone https://github.com/agustingu20/challenge-react-alkemy-refactored.git
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
